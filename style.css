@@ -1,0 +1,504 @@
+/* style.css */
+
+/* =========== Global Styles & Variables =========== */
+:root {
+    --primary-color: #2563eb; /* Blue 600 */
+    --dark-color: #1f2937;    /* Gray 800 */
+    --light-color: #f9fafb;   /* Gray 50 */
+    --text-dark: #111827;     /* Gray 900 */
+    --text-medium: #4b5563;  /* Gray 600 */
+    --text-light: #6b7280;   /* Gray 500 */
+    --border-color: #e5e7eb; /* Gray 200 */
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-medium);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* =========== Header Section =========== */
+.header-section {
+    background-color: white;
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem auto;
+    border: 4px solid white;
+    box-shadow: var(--shadow-lg);
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-medium);
+    margin-top: 0.5rem;
+}
+
+.tagline {
+    max-width: 600px;
+    margin: 1rem auto 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.contact-info {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-medium);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item:hover {
+    color: var(--primary-color);
+}
+
+.separator {
+    display: none; /* Hidden on mobile */
+}
+
+.action-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* =========== Buttons =========== */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.btn-dark {
+    background-color: var(--dark-color);
+    color: white;
+}
+.btn-dark:hover {
+    background-color: #374151; /* Gray 700 */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #3b82f6; /* Blue 500 */
+}
+
+.btn-light {
+    background-color: white;
+    color: var(--dark-color);
+    border-color: var(--border-color);
+}
+.btn-light:hover {
+    background-color: #f9fafb; /* Gray 50 */
+}
+
+/* =========== General Section Styling =========== */
+.section-title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--text-medium);
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+/* =========== Card Styling =========== */
+.card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* =========== Grid Layout =========== */
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.two-cols {
+    grid-template-columns: 1fr;
+}
+
+.three-cols {
+    grid-template-columns: 1fr;
+}
+
+/* =========== Experience Section =========== */
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+.experience-logo {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    align-self: center;
+}
+.experience-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+.experience-details {
+    width: 100%;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.job-meta {
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.status-badge {
+    background-color: #dcfce7; /* Green 100 */
+    color: #166534; /* Green 800 */
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+.company-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-medium);
+    margin-top: 0.25rem;
+}
+
+.job-duties {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+    color: var(--text-medium);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* =========== Education Section =========== */
+.education-card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.education-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #f3f4f6; /* Gray 100 */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    font-size: 2rem;
+    color: var(--text-light);
+}
+
+.degree-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.university-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-medium);
+    margin-top: 0.25rem;
+}
+
+.education-meta {
+    margin-top: 1rem;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.education-meta p {
+    margin: 0;
+}
+
+.education-meta i {
+    margin-right: 0.5rem;
+}
+
+/* =========== Projects & Skills Section =========== */
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.project-link {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.project-date {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.25rem;
+}
+
+.project-description {
+    margin-top: 1rem;
+}
+
+.project-footer {
+    padding: 1rem 1.5rem;
+    background-color: #f9fafb; /* Gray 50 */
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+.tech-heading {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills-card {
+    padding: 1.5rem;
+}
+
+.skills-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* =========== Tags =========== */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: #eef2ff; /* Indigo 100 */
+    color: #3730a3; /* Indigo 800 */
+    border: 1px solid #e0e7ff; /* Indigo 200 */
+}
+
+/* Specific tag colors for variety */
+.tag-python { background-color: #dbeafe; color: #1e40af; }
+.tag-django { background-color: #d1fae5; color: #065f46; }
+.tag-js { background-color: #fef3c7; color: #92400e; }
+.tag-aws { background-color: #ffedd5; color: #9a3412; }
+.tag-sql { background-color: #fee2e2; color: #991b1b; }
+.tag-react { background-color: #cffafe; color: #0e7490; }
+
+/* =========== Footer =========== */
+.footer-section {
+    background-color: var(--dark-color);
+    color: #d1d5db; /* Gray 300 */
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-subtitle {
+    color: #9ca3af; /* Gray 400 */
+    margin-top: 0.5rem;
+}
+
+.footer-section .contact-info a, .footer-section .contact-info div {
+    color: #d1d5db;
+}
+
+.footer-section .contact-info a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #374151; /* Gray 700 */
+    color: #6b7280; /* Gray 500 */
+}
+
+/* =========== Back to Top Button =========== */
+.to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    box-shadow: var(--shadow-lg);
+    transition: background-color 0.3s;
+    z-index: 100;
+}
+
+.to-top-button:hover {
+    background-color: #3b82f6; /* Blue 500 */
+}
+
+/* =========== Responsive Design =========== */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .contact-info {
+        gap: 1.5rem;
+    }
+
+    .separator {
+        display: block;
+        color: var(--border-color);
+    }
+    
+    .experience-card {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .experience-logo {
+        align-self: flex-start;
+    }
+
+    .two-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .three-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .three-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
